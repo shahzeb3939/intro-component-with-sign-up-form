@@ -164,11 +164,120 @@ body {
     text-decoration: none;
 }
 
+footer {
+    min-width: 100%;
+}
+
 .attribution {
     position: absolute;
-    width: 100vw;
+    min-width: 100vw;
     bottom: 5px;
+
+    padding: auto;
+
     /* left: 50%; */
     /* margin-left: -30px; */
     /* transform: translateX(30%); */
+}
+
+@media (max-width: 375px) {
+    body {
+        /* height: 2000px;
+        width: 2000px; */
+        /* min-height: 100vh;
+        min-width: 100vw; */
+        /* background: black; */
+
+        /* display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center; */
+
+        /* display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 4fr 2fr 6fr; */
+
+        display: block;
+        /* width: 100px; */
+        /* height: 100vh; */
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: 4fr 2fr 6fr;
+
+        min-width: 100%;
+        max-width: 100vw;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .text {
+        /* display: block; */
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        grid-column-start: 2;
+        grid-column-end: 2;
+
+        /* min-width: 100%; */
+
+        display: flex;
+        flex-direction: colurmn;
+        align-self: center;
+
+        text-align: center;
+
+    }
+
+    .text p:nth-of-type(1) {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+    }
+
+    .text p:nth-of-type(2) {
+        font-size: .75rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+    }
+
+    .try-free {
+        /* display: block; */
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        min-width: 100%;
+    }
+
+    .try-free button {
+        min-height: 60%;
+        white-space: wrap;
+    }
+
+    .form {
+        /* display: block; */
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        /* max-width: 100%; */
+
+        margin-bottom: 20%;
+    }
+
+    .attribution {
+        position: relative;
+        min-width: 100vw;
+        bottom: 5px;
+    
+        padding: auto;
+    
+        /* left: 50%; */
+        /* margin-left: -30px; */
+        /* transform: translateX(30%); */
+    }
 }
